@@ -23,7 +23,7 @@ repository               : "prasadboi/prasadboi.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpeg"
+  avatar           : "profile.png"
   name             : "Arjun Parasuram Prasad"
   pronouns         : # example: "she/her"  
   bio              : "MS CS @ NYU | ex-Providence, SuperPe"
