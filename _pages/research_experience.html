@@ -1,0 +1,81 @@
+---
+layout: single
+title: "Research Experience"
+permalink: /research_experience/
+author_profile: true
+---
+
+{% assign items = site.research_experience | where_exp:"p","p.research_start" %}
+
+{%- comment -%} Ongoing first (blank end), then ended by most recent end {%- endcomment -%}
+{% assign ongoing = items | where_exp:"p","p.research_end == blank" | sort:"research_start" | reverse %}
+{% assign ended   = items | where_exp:"p","p.research_end != blank" | sort:"research_end"   | reverse %}
+
+<p style="opacity:.7">Found {{ items | size }} research item(s).</p>
+
+<div class="entries-list">
+
+{%- comment -%} 1) Ongoing roles (Present) {%- endcomment -%}
+{% for post in ongoing %}
+  {% assign start_label = post.research_start | date:"%b %Y" %}
+  {% assign end_label = "Present" %}
+  {% assign blurb = post.summary | default: post.excerpt %}
+
+  {%- comment -%} Normalize lab name + url (accept lab/ lab_url or group/ group_url) {%- endcomment -%}
+  {% assign lab_name = post.lab | default: post.group | default: post.group_name %}
+  {% assign lab_url  = post.lab_url | default: post.group_url %}
+
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <h2 class="archive__item-title" itemprop="headline">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h2>
+    <ul class="role-meta">
+      {% if lab_name or lab_url %}
+      <li><strong>Research Group / Advisor:</strong>
+        {% if lab_url %}
+          <a href="{{ lab_url }}" target="_blank" rel="noopener">{{ lab_name | default: lab_url | replace:'https://','' | replace:'http://','' | split:'/' | first }}</a>
+        {% else %}
+          {{ lab_name }}
+        {% endif %}
+        {% if post.location %} — {{ post.location }}{% endif %}
+      </li>
+      {% endif %}
+
+      {% if blurb %}<li><strong>Description:</strong> {{ blurb }}</li>{% endif %}
+      <li><strong>Dates:</strong> {{ start_label }} — {{ end_label }}</li>
+    </ul>
+  </article>
+{% endfor %}
+
+{%- comment -%} 2) Ended roles {%- endcomment -%}
+{% for post in ended %}
+  {% assign start_label = post.research_start | date:"%b %Y" %}
+  {% assign end_label   = post.research_end   | date:"%b %Y" %}
+  {% assign blurb = post.summary | default: post.excerpt %}
+
+  {% assign lab_name = post.lab | default: post.group | default: post.group_name %}
+  {% assign lab_url  = post.lab_url | default: post.group_url %}
+
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <h2 class="archive__item-title" itemprop="headline">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h2>
+    <ul class="role-meta">
+      {% if lab_name or lab_url %}
+      <li><strong>Research Group / Advisor:</strong>
+        {% if lab_url %}
+          <a href="{{ lab_url }}" target="_blank" rel="noopener">{{ lab_name | default: lab_url | replace:'https://','' | replace:'http://','' | split:'/' | first }}</a>
+        {% else %}
+          {{ lab_name }}
+        {% endif %}
+        {% if post.location %} — {{ post.location }}{% endif %}
+      </li>
+      {% endif %}
+
+      {% if blurb %}<li><strong>Description:</strong> {{ blurb }}</li>{% endif %}
+      <li><strong>Dates:</strong> {{ start_label }} — {{ end_label }}</li>
+    </ul>
+  </article>
+{% endfor %}
+
+</div>

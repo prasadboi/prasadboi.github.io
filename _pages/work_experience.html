@@ -1,0 +1,79 @@
+---
+layout: single
+title: "Work Experience"
+permalink: /work_experience/
+author_profile: true
+---
+
+{%- comment -%} Only items that have a start date {%- endcomment -%}
+{% assign items = site.work_experience | where_exp:"p","p.work_start" %}
+
+{%- comment -%} Split into ongoing (blank work_end) and ended {%- endcomment -%}
+{% assign ongoing = items | where_exp:"p","p.work_end == blank" | sort:"work_start" | reverse %}
+{% assign ended   = items | where_exp:"p","p.work_end != blank" | sort:"work_end"   | reverse %}
+
+<p style="opacity:.7">Found {{ items | size }} role(s).</p>
+
+<div class="entries-list">
+
+{%- comment -%} 1) Ongoing roles (Present) first {%- endcomment -%}
+{% for post in ongoing %}
+  {% assign start_label = post.work_start | date:"%b %Y" %}
+  {% assign end_label = "Present" %}
+  {% assign blurb = post.summary | default: post.excerpt %}
+
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <h2 class="archive__item-title" itemprop="headline">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h2>
+    <ul class="role-meta">
+      {% if post.company or post.company_url %}
+      <li><strong>Company:</strong>
+        {% if post.company_url %}
+          <a href="{{ post.company_url }}" target="_blank" rel="noopener">
+            {{ post.company | default: post.company_url | replace:'https://','' | replace:'http://','' | split:'/' | first }}
+          </a>
+        {% else %}
+          {{ post.company }}
+        {% endif %}
+        {% if post.location %} — {{ post.location }}{% endif %}
+      </li>
+      {% endif %}
+
+      {% if blurb %}<li><strong>Description:</strong> {{ blurb }}</li>{% endif %}
+      <li><strong>Dates:</strong> {{ start_label }} — {{ end_label }}</li>
+    </ul>
+  </article>
+{% endfor %}
+
+{%- comment -%} 2) Ended roles by most-recent end date {%- endcomment -%}
+{% for post in ended %}
+  {% assign start_label = post.work_start | date:"%b %Y" %}
+  {% assign end_label   = post.work_end   | date:"%b %Y" %}
+  {% assign blurb = post.summary | default: post.excerpt %}
+
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <h2 class="archive__item-title" itemprop="headline">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h2>
+    <ul class="role-meta">
+      {% if post.company or post.company_url %}
+      <li><strong>Company:</strong>
+        {% if post.company_url %}
+          <a href="{{ post.company_url }}" target="_blank" rel="noopener">
+            {{ post.company | default: post.company_url | replace:'https://','' | replace:'http://','' | split:'/' | first }}
+          </a>
+        {% else %}
+          {{ post.company }}
+        {% endif %}
+        {% if post.location %} — {{ post.location }}{% endif %}
+      </li>
+      {% endif %}
+
+      {% if blurb %}<li><strong>Description:</strong> {{ blurb }}</li>{% endif %}
+      <li><strong>Dates:</strong> {{ start_label }} — {{ end_label }}</li>
+    </ul>
+  </article>
+{% endfor %}
+
+</div>

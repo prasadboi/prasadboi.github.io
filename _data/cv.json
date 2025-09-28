@@ -1,152 +1,146 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "name": "Arjun Parasuram Prasad",
+    "email": "arjun.prasad@nyu.edu",
+    "phone": "+1-914-336-0944",
+    "website": "https://prasadboi.github.io",
+    "summary": "MS CS @ NYU | ex-Providence, SuperPe",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
+      "city": "New York",
       "countryCode": "US",
       "region": ""
     },
     "profiles": [
       {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "http://orcid.org/yourorcidurl"
+        "network": "LinkedIn",
+        "username": "arjun-p-prasad",
+        "url": "https://linkedin.com/in/arjun-p-prasad"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "prasadboi",
+        "url": "https://github.com/prasadboi"
       }
     ]
   },
-  "work": [],
-  "education": [
+  "work": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
+      "company": "Providence Health Care",
+      "position": "Data Analytics Engineer",
+      "website": "https://www.providence.in/",
+      "startDate": "2023-06-01",
+      "endDate": "2024-08-01",
+      "summary": "Engineered ETL pipelines using Azure Data Factory for an in-house data migration tool (Ultrasonic), handling 10M+ row datasets across diverse source/target systems. Partnered with marketing stakeholders to build a Snowflake-based analytics framework; integrated advanced stored procedures with Power BI dashboards to internalize campaign KPI tracking, eliminating >$2M in outsourcing costs. Shipped CI/CD pipelines to automate SQL script deployments, reducing manual effort by ~60 hours/month.",
+      "highlights": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
+      "company": "SuperPe.in",
+      "position": "Machine Learning Intern",
+      "website": "https://www.linkedin.com/company/superpe/",
+      "startDate": "2023-01-01",
+      "endDate": "2023-06-01",
+      "summary": "Built analytical dashboards to track merchant onboarding and financial KPIs; identified bottlenecks that reduced drop-offs by 40%. Developed an OCR pipeline to extract/validate merchant document numbers with 97% accuracy (Google Vision + OpenCV), removing manual entry; deployed via AWS Lambda and Amazon EFS. Created a RAG-based conversational agent (LangChain + Milvus) to automate customer query resolution via agent–tool workflows.",
+      "highlights": []
     }
   ],
-  "skills": [],
+  "education": [
+    {
+      "institution": "NYU, Courant Institute of Mathematical Sciences",
+      "area": "Master of Science in Computer Science",
+      "studyType": "",
+      "startDate": "2024-08-01",
+      "endDate": "2026-05-01",
+      "gpa": "3.83/4",
+      "courses": [
+        "Machine Learning, Computer Vision, Big Data & ML Systems, GPU Programming, Algorithms, Operating Systems"
+      ]
+    },
+    {
+      "institution": "BITS Pilani — Hyderabad Campus, India",
+      "area": "Bachelor of Engineering (Computer Science)",
+      "studyType": "",
+      "startDate": "2019-08-01",
+      "endDate": "2023-06-01",
+      "gpa": "8.65/10",
+      "courses": [
+        "Deep Learning, NLP, Data Structures & Algorithms, Database Systems, Probability & Statistics"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "ML Engineering",
+      "level": "",
+      "keywords": [
+        "Search, Ranking, RAG, ML Systems, Vector DBs, NLP, Computer Vision, LLMs, Distributed Training & Inference, PyTorch, Hugging Face, Weights & Biases, LangChain, vLLM"
+      ]
+    },
+    {
+      "name": "Data Engineering",
+      "level": "",
+      "keywords": [
+        "SQL, Vector Databases, PostgreSQL, Snowflake, Azure Data Factory, ETL, HDFS, Power BI, CI/CD"
+      ]
+    },
+    {
+      "name": "Software Engineering",
+      "level": "",
+      "keywords": [
+        "Java, C/C++, Python, Docker, Kubernetes, Singularity, HPC, AWS, Distributed Systems, REST APIs, FastAPI"
+      ]
+    }
+  ],
   "languages": [],
   "interests": [],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "http://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "Context-Aware Behavioral Fingerprinting of IoT Devices via Network Traffic Analysis",
+      "publisher": "20th International Conference on Security and Cryptography (SECRYPT 2023)",
+      "releaseDate": "2023-07-12",
+      "website": "https://dblp.org/rec/conf/secrypt/PrasadBSM23",
+      "summary": ""
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "http://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "Auto-Markup Benchmark: Towards an Industry-standard Benchmark for Evaluating Automatic Document Markup",
+      "publisher": "Balisage: The Markup Conference 2023",
+      "releaseDate": "2023-08-01",
+      "website": "https://www.balisage.net/Proceedings/vol28/html/Prescod01/BalisageVol28-Prescod01.html",
+      "summary": ""
     }
   ],
-  "presentations": [
-    {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
-    }
-  ],
-  "teaching": [
-    {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
-    }
-  ],
+  "presentations": [],
+  "teaching": [],
   "portfolio": [
     {
-      "name": "Portfolio item number 1",
+      "name": "Fine-Tuning Llama 3.2–3B on IPCC Climate Reports",
       "category": "portfolio",
-      "date": "",
+      "date": "2025-04-01",
       "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "description": "Applied 4-bit quantization, BF16, and LoRA (r=8, α=32) with gradient checkpointing; reduced trainable parameters to ~2.3M (~0.07%) and enabled micro-batch size 32 on a single A100. Orchestrated data/tensor/pipeline parallelism across 2×A100s; doubled throughput (337→169 min) and cut per-GPU memory up to ~48%. Packaged modular Trainer scripts and SLURM workflows to automate QLoRA (pplx 7.996) and multi-GPU runs (pplx 14.36–22.97)."
+    },
+    {
+      "name": "MOT-TR — Fine-Tuning DETR for Moved-Object Detection",
+      "category": "portfolio",
+      "date": "2025-05-01",
+      "url": "",
+      "description": "Built end-to-end pipeline to fine-tune DETR for detecting moved objects in image pairs (scene-change analysis for traffic surveillance). Reduced eval loss from 2.38 to 0.60 via staged training, transfer learning, and cosine LR scheduling; stabilized convergence on small custom datasets. Achieved reproducible experiments with automated logging, checkpointing, and visualization."
+    },
+    {
+      "name": "Limit Order Book Midpoint Prediction for Crypto",
+      "category": "portfolio",
+      "date": "2024-12-01",
+      "url": "https://github.com/prasadboi/Limit_Order_Book_Mid_Point_Prediction",
+      "description": "Transformed bid/ask distance percentages into prices, computed Order Flow Imbalance at 5/10 depths, and structured normalized 100-record windows. Benchmarked KNN, SVR, MLP, LSTM, CNN+LSTM, CNN+SVR, and a custom neural-SVR with dynamically scaled ε-insensitive loss and trend-alignment penalty; evaluated with MSE and R². Delivered state-of-the-art results with custom-loss neural-SVR (MSE 28.05; R² 0.998); improved trend interpretability via OFI features."
+    },
+    {
+      "name": "OS Simulation Suite",
+      "category": "portfolio",
+      "date": "2024-12-01",
+      "url": "",
+      "description": "Implemented paging system parsing per-process VMAs and memory-access traces; enforced FIFO/Random/Clock/Aging/Working-Set; produced per-reference logs and end-to-end cost summaries. Built a discrete-event disk scheduler (FIFO, SSTF, LOOK, C-LOOK, FLOOK); modeled head motion at 1 track/time-unit; logged arrival/start/end times and computed movement, utilization, turnaround, and wait stats. Developed an event-driven process-lifecycle simulator with FCFS, SJF/SRTF, Round-Robin, Priority; generated per-process metrics and overall utilization reports."
     }
   ]
 }
